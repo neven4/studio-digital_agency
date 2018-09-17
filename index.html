@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Studio - digital agency</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<style>
+		/* Slider styles and responsive */
+		.slider {
+			position: relative;
+			width: 100%;
+			height: 380px;
+			overflow: hidden;
+		}
+
+		.slider__slides {
+			position: relative;
+			width: 100%;
+			height: 380px;
+			transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+			will-change: transform;
+		}
+
+		.slider[data-pos="0"] .slider__slides {
+			transform: translateY(0%);
+		}
+
+		.slider[data-pos="1"] .slider__slides {
+			transform: translateY(-100%);
+		}
+
+		.slider[data-pos="2"] .slider__slides {
+			transform: translateY(-200%);
+		}
+
+		.slider[data-pos="3"] .slider__slides {
+			transform: translateY(-300%);
+		}
+
+		.slider__slide {
+			max-width: 800px;
+			height: 380px;
+			margin: 0 auto;
+			color: #fff;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.person {
+			display: flex;
+			align-items: center;
+		}
+
+		.person img {
+			height: 100px;
+			width: 100px;
+			border-radius: 50%;
+			border: 1px solid #fff;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.person-info {
+			margin-left: 20px;
+		}
+
+		.person-info h5 {
+			font-size: 20px;
+			font-weight: 400;
+		}
+
+		.review p {
+			margin-top: 25px;
+			font-size: 20px;
+		}
+
+
+		.slider__dots {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			bottom: 34%;
+			right: 0;
+			transform: translateX(-50%);
+		}
+
+		.slider__dot,
+		.slider__indicator {
+			display: block;
+			margin: 0.5em 0;
+			width: 1em;
+			height: 1em;
+			background: rgba(255, 255, 255, 0.7);
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		.slider__indicator {
+			position: absolute;
+			background: #0BDBA3;
+			height: auto;
+		}
+
+		.slider__indicator--left {
+			transition: top 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15), bottom 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+		}
+
+		.slider__indicator--right {
+			transition: top 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15), bottom 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15);
+		}
+
+		.slider[data-pos="0"] .slider__indicator {
+			top: 0em;
+			bottom: 6em;
+		}
+
+		.slider[data-pos="1"] .slider__indicator {
+			top: 2em;
+			bottom: 4em;
+		}
+
+		.slider[data-pos="2"] .slider__indicator {
+			top: 4em;
+			bottom: 2em;
+		}
+
+		.slider[data-pos="3"] .slider__indicator {
+			top: 6em;
+			bottom: 0em;
+		}
+
+		.slider {
+			margin: 0 auto;
+			max-width: 1700px;
+			max-height: 400px;
+		}
+
+		@media screen and (min-width: 1171px) and (max-width: 1400px) {
+			.slider {
+				max-width: 1200px;
+				font-size: 14px;
+
+			}
+
+			.person img {
+				height: 80px;
+				width: 80px;
+
+			}
+
+			.person-info {
+				margin-left: 20px;
+			}
+
+			.person-info h5 {
+				font-size: 16px;
+				font-weight: 400;
+			}
+
+			.review p {
+				margin-top: 25px;
+				font-size: 16px;
+			}
+		}
+
+		@media screen and (min-width: 769px) and (max-width: 1170px) {
+			.slider {
+				max-width: 760px;
+				font-size: 13px;
+				height: 280px;
+			}
+
+			.slider[data-pos="0"] .slider__slides {
+				transform: translateY(0px);
+			}
+
+			.slider[data-pos="1"] .slider__slides {
+				transform: translateY(-280px);
+			}
+
+			.slider[data-pos="2"] .slider__slides {
+				transform: translateY(-560px);
+			}
+
+			.slider[data-pos="3"] .slider__slides {
+				transform: translateY(-840px);
+			}
+
+			.slider__slide {
+				max-width: 800px;
+				height: 280px;
+			}
+
+			.person img {
+				height: 60px;
+				width: 60px;
+
+			}
+
+			.person-info {
+				margin-left: 20px;
+			}
+
+			.person-info h5 {
+				font-size: 16px;
+				font-weight: 400;
+			}
+
+			.review p {
+				max-width: 700px;
+				margin-top: 25px;
+				font-size: 14px;
+			}
+		}
+
+		@media screen and (min-width: 501px) and (max-width: 768px) {
+			.slider {
+				max-width: 480px;
+				font-size: 13px;
+
+			}
+
+
+			.slider__slide {
+				width: 100%;
+
+			}
+
+			.person img {
+				height: 60px;
+				width: 60px;
+
+			}
+
+			.person-info {
+				margin-left: 20px;
+			}
+
+			.person-info h5 {
+				font-size: 17px;
+				font-weight: 400;
+			}
+
+			.review p {
+				max-width: 400px;
+				margin-top: 20px;
+				font-size: 14px;
+				margin-left: 10px;
+			}
+		}
+
+
+		@media screen and (max-width: 500px) {
+			.slider {
+				max-width: 310px;
+				font-size: 13px;
+				height: 280px;
+			}
+
+			.slider[data-pos="0"] .slider__slides {
+				transform: translateY(0px);
+			}
+
+			.slider[data-pos="1"] .slider__slides {
+				transform: translateY(-280px);
+			}
+
+			.slider[data-pos="2"] .slider__slides {
+				transform: translateY(-560px);
+			}
+
+			.slider[data-pos="3"] .slider__slides {
+				transform: translateY(-840px);
+			}
+
+			.slider__slide {
+				width: 100%;
+				height: 280px;
+			}
+
+			.person img {
+				height: 60px;
+				width: 60px;
+
+			}
+
+			.person-info {
+				margin-left: 20px;
+			}
+
+			.person-info h5 {
+				font-size: 17px;
+				font-weight: 400;
+			}
+
+			.review p {
+				max-width: 260px;
+				margin-top: 20px;
+				font-size: 14px;
+				margin-left: 5px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<section class="header">
+		<div class="header-top">
+			<div class="menu-btn">
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+				<div class="btn-line"></div>
+			</div>
+			<div class="header-logo">
+				<a href="index.html" class="logo">Studio</a>
+			</div>
+
+			<nav class="menu">
+				<ul class="menu-nav">
+					<li class="nav-item">
+						<a href="/" class="nav-link">
+							Home
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">
+							About Us
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="work.html" class="nav-link">
+							Our work
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="work.html" class="nav-link">
+							Expertise
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="work.html" class="nav-link">
+							Price
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="contact.html" class="nav-link">
+							Contacts
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+
+		<div class="main_header">
+
+
+
+			<h1>We build digital products & services</h1>
+
+			<p>From small businesses to large companies, we have been successfully creating websites and web applications for our
+				clients.
+			</p>
+
+			<div class="button-header">
+				<a href="#" class="btn">
+					<span class="inside">See our work</span>
+
+				</a>
+			</div>
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="scroll">
+			<img src="img/scroll.svg" alt="">
+		</div>
+
+
+
+
+	</section>
+
+	<section class="features">
+
+
+
+		<div class="item item1">
+
+
+
+			<img src="img/icon1.svg" alt="">
+
+
+
+			<div class="text">
+
+				<h3>ui/ux design</h3>
+
+				<p>Let you’ll one had. Gathering replenish behold open subdue signs place hath meat image fly.</p>
+
+			</div>
+		</div>
+
+
+
+
+		<div class="item item2">
+
+
+
+			<img src="img/icon2.svg" alt="">
+
+
+
+			<div class="text">
+
+				<h3>wordpress</h3>
+
+				<p>Let you’ll one had. Gathering replenish behold open subdue signs place hath meat image fly.</p>
+
+			</div>
+		</div>
+
+
+		<div class="item item3">
+
+
+
+			<img src="img/icon3.svg" alt="">
+
+
+
+			<div class="text">
+
+				<h3>development</h3>
+
+				<p>Let you’ll one had. Gathering replenish behold open subdue signs place hath meat image fly.</p>
+
+			</div>
+		</div>
+
+	</section>
+
+	<section class="about">
+
+
+
+		<div class="image"></div>
+
+
+
+		<div class="right">
+
+			<div class="smth">
+				<div class="dif"></div>
+				<span>Something about us</span>
+			</div>
+
+			<h2>about us</h2>
+
+			<p>Man signs moving of may may made above likeness kind fowl together gathered third their itself, earth void signs Thing
+				waters. To give fourth shall days stars. Male darkness, it appear them the there which fruit unto creepeth years subdue
+				day bearing man given she’d grass so them.</p>
+
+			<p>From. Above dominion place she’d the itself fish let creature kind. Sixth moveth whose. Spirit. Seasons fruit that
+				earth dry be fly gathered yielding made his itself firmament creeping dry abundantly lights make.</p>
+
+			<div class="skills">
+
+				<h5>Our Slills</h5>
+				<div class="skill">
+
+					<div class="lvl ps">
+						<span class="programm">Ps</span>
+						<span class="persent">99%</span>
+					</div>
+
+
+				</div>
+
+
+
+
+				<div class="skill">
+
+					<div class="lvl ai">
+						<span class="programm">Ai</span>
+						<span class="persent">70%</span>
+					</div>
+
+
+				</div>
+
+				<div class="skill">
+
+					<div class="lvl seo">
+						<span class="programm">SEO</span>
+						<span class="persent">80%</span>
+					</div>
+
+
+				</div>
+				<div class="skill">
+
+					<div class="lvl wp">
+						<span class="programm">WP</span>
+						<span class="persent">60%</span>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</section>
+
+	<section class="portfolio">
+
+		<h2>portfolio</h2>
+		<div class="smth">
+			<div class="dif"></div>
+			<span>Our portfolio</span>
+		</div>
+
+
+		<div class="column_port">
+
+			<div class="content">
+				<img src="img/1.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Our project num. 1</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+			<div class="content">
+				<img src="img/4.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Looking4Parking</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="content">
+				<img src="img/2.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Looking4Parking</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+			<div class="content">
+				<img src="img/5.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Looking4Parking</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+
+
+
+			<div class="content">
+				<img src="img/3.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Looking4Parking</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+			<div class="content">
+				<img src="img/6.jpg" alt="" class="image_port">
+				<div class="middle">
+					<h3>Looking4Parking</h3>
+					<p>Online booking platform for airport & marine parking</p>
+					<a href="#">Learn More</a>
+				</div>
+			</div>
+
+		</div>
+
+
+
+		<div class="btn-portfolio">
+			<a href="#" class="btn">
+
+				<span class="inside">Load more</span>
+
+			</a>
+		</div>
+
+
+
+
+
+	</section>
+
+	<section class="slider_bg">
+
+
+		<div class="slider" data-pos="0">
+			<div class="slider__slides">
+				<div class="slider__slide">
+					<div class="person">
+						<img src="img/giorgio-encinas-781653-unsplash.jpg" alt="">
+						<div class="person-info">
+							<h5>Giorgio Encinas</h5>
+							<span>Founder of Mania</span>
+						</div>
+
+
+					</div>
+
+					<div class="review">
+
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+							two gathering him void image was midst rule hath may isn’t waters.”</p>
+
+					</div>
+				</div>
+				<div class="slider__slide">
+					<div class="person">
+
+						<img src="img/timothy-barlin-487415-unsplash.jpg" alt="">
+						<div class="person-info">
+							<h5>Timothy Barlin</h5>
+							<span>Founder of Barlin&Co</span>
+						</div>
+
+					</div>
+
+					<div class="review">
+
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+							two gathering him void image was midst rule hath may isn’t waters.”</p>
+
+					</div>
+				</div>
+				<div class="slider__slide">
+					<div class="person">
+
+						<img src="img/sergio-souza-701583-unsplash.jpg" alt="">
+						<div class="person-info">
+							<h5>Sergio Souza</h5>
+							<span>Founder of Souza.com</span>
+						</div>
+					</div>
+
+					<div class="review">
+
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+							two gathering him void image was midst rule hath may isn’t waters.”</p>
+
+					</div>
+				</div>
+				<div class="slider__slide">
+					<div class="person">
+
+						<img src="img/deva-darshan-448232-unsplash.jpg" alt="">
+						<div class="person-info">
+							<h5>Deva Darshan</h5>
+							<span>Founder of Unsplash</span>
+						</div>
+					</div>
+
+					<div class="review">
+
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+							two gathering him void image was midst rule hath may isn’t waters.”</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="slider__dots">
+				<a class="slider__indicator"></a>
+				<a class="slider__dot" data-pos="0"></a>
+				<a class="slider__dot" data-pos="1"></a>
+				<a class="slider__dot" data-pos="2"></a>
+				<a class="slider__dot" data-pos="3"></a>
+			</div>
+		</div>
+
+
+	</section>
+
+	<section class="price">
+
+
+		<div class="item_price">
+
+			<h4>basic</h4>
+
+			<p>$54
+				<span>/Year</span>
+			</p>
+
+			<span>1 mail adderss</span>
+			<span>No Support</span>
+			<span>One Product</span>
+			<span>One Client</span>
+			<span>1GB Storage</span>
+
+			<a href="#" class="btn">
+				<span class="inside">Buy Now</span>
+
+			</a>
+
+		</div>
+
+
+		<div class="item_price">
+
+			<h4>standart</h4>
+
+			<p>$84
+				<span>/Year</span>
+			</p>
+
+			<span>2 mail adderss</span>
+			<span>Limited Support</span>
+			<span>One Product</span>
+			<span>Two Client</span>
+			<span>5GB Storage</span>
+
+			<a href="#" class="btn">
+				<span class="inside">Buy Now</span>
+
+			</a>
+
+		</div>
+
+
+
+		<div class="item_price">
+
+			<h4>pro</h4>
+
+			<p>$154
+				<span>/Year</span>
+			</p>
+
+			<span>3 mail adderss</span>
+			<span>Unlimited Support</span>
+			<span>One Product</span>
+			<span>Unlimited Client</span>
+			<span>10GB Storage</span>
+
+			<a href="#" class="btn">
+				<span class="inside">Buy Now</span>
+
+			</a>
+
+		</div>
+
+
+
+
+	</section>
+
+	<section class="form">
+
+		<h3>Subscribe to our news letter to get the latest news</h3>
+
+
+
+
+
+		<form action="post">
+
+			<input type="text" placeholder="Name">
+			<input type="email" placeholder="Your email">
+			<button>subscribe</button>
+
+		</form>
+
+		<div class="social">
+
+			<a href="#">
+				<i class="fab fa-facebook-f fa-lg"></i>
+			</a>
+
+			<a href="#">
+				<i class="fab fa-youtube fa-lg"></i>
+			</a>
+
+			<a href="#">
+				<i class="fab fa-instagram fa-lg"></i>
+			</a>
+
+			<a href="#">
+				<i class="fab fa-twitter fa-lg"></i>
+			</a>
+
+			<a href="#">
+				<i class="fab fa-linkedin-in fa-lg"></i>
+			</a>
+
+
+		</div>
+
+
+
+	</section>
+
+	<section class="footer">
+
+
+
+		<nav>
+
+			<ul>
+				<li>
+					<a href="#">Home</a>
+				</li>
+				<li>
+					<a href="#">About Us</a>
+				</li>
+				<li>
+					<a href="#">Our Work</a>
+				</li>
+				<li>
+					<a href="#">Expertise</a>
+				</li>
+				<li>
+					<a href="#">Price</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+
+		</nav>
+
+
+
+	</section>
+
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

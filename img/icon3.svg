@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1277.062 1134.909 126.729 127.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #8a0bdb;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="icon3" transform="translate(1281.86 1139.769)">
+    <path id="Shape" class="cls-1" d="M3.249,123.444H123.18V2.423L3.249,123.444ZM102.035,102.3H63.206L102.035,63v39.3Z" transform="translate(-3.249 -2.423)"/>
+    <path id="Shape-2" data-name="Shape" class="cls-1" d="M26.241,71.152,37.2,82.11" transform="translate(4.144 19.676)"/>
+    <path id="Shape-3" data-name="Shape" class="cls-1" d="M33.744,63.65l5.861,5.863" transform="translate(6.556 17.264)"/>
+    <path id="Shape-4" data-name="Shape" class="cls-1" d="M41.245,56.148,52.206,67.106" transform="translate(8.968 14.852)"/>
+    <path id="Shape-5" data-name="Shape" class="cls-1" d="M48.748,48.646l5.861,5.862" transform="translate(11.381 12.439)"/>
+    <path id="Shape-6" data-name="Shape" class="cls-1" d="M56.25,41.143,67.209,52.1" transform="translate(13.793 10.027)"/>
+    <path id="Shape-7" data-name="Shape" class="cls-1" d="M63.752,33.641l5.861,5.865" transform="translate(16.205 7.615)"/>
+    <path id="Shape-8" data-name="Shape" class="cls-1" d="M71.254,26.14,82.213,37.1" transform="translate(18.617 5.203)"/>
+  </g>
+</svg>

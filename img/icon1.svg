@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="190.909 1135.745 121.345 127.666">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #8a0bdb;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="icon1" transform="translate(192.96 1137.745)">
+    <path id="Shape" class="cls-1" d="M70.256,97.141h-41.6L32.114,84.7H66.8Z" transform="translate(9.166 26.524)"/>
+    <path id="Shape-2" data-name="Shape" class="cls-1" d="M24.526,58.1c-9.457,2.516-19.754-5.32-23-17.5s1.8-24.095,11.253-26.611a14.438,14.438,0,0,1,7.758.126" transform="translate(-0.547 1.927)"/>
+    <path id="Shape-3" data-name="Shape" class="cls-1" d="M69.858,58.1c9.457,2.516,19.754-5.32,23-17.5s-1.8-24.1-11.252-26.612a14.456,14.456,0,0,0-7.853.154" transform="translate(23.405 1.927)"/>
+    <path id="Shape-4" data-name="Shape" class="cls-1" d="M88.45,2.04h-68.9A4.054,4.054,0,0,0,15.5,6.094V43.7C15.5,66.67,32.77,85.357,54,85.357S92.5,66.67,92.5,43.7V6.094A4.053,4.053,0,0,0,88.45,2.04Z" transform="translate(4.62 -2.04)"/>
+    <path id="Shape-5" data-name="Shape" class="cls-1" d="M54.653,28.32c-6.264-17.836-4.765-17.41-10.882,0C24.639,28.7,25.6,27.478,40.4,38.587c-5.532,18.09-6.464,16.852,8.812,6.335,15.683,10.8,14.207,11.3,8.81-6.335,15.246-11.437,15.206-9.9-3.37-10.267Z" transform="translate(9.404 2.474)"/>
+    <path id="Shape-6" data-name="Shape" class="cls-1" d="M40.222,89.561V70.984" transform="translate(13.164 21.785)"/>
+    <path id="Shape-7" data-name="Shape" class="cls-1" d="M48,89.561V70.984" transform="translate(15.852 21.785)"/>
+  </g>
+</svg>
