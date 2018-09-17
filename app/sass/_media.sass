@@ -1,0 +1,880 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+ 
+
+
+
+@media screen and (min-width: 1400px) and (max-width: 1740px)
+    .header
+        .header-top
+            width: 1200px
+
+
+@media screen and (min-width: 1171px) and (max-width: 1400px)
+    body
+        font-size: 14px
+    .header
+        .header-top
+            width: 1200px
+            .header-logo
+                font-size: 2rem
+        .main_header
+            margin-top: 150px
+            max-width: 700px
+            h1
+                font-size: 3.5rem
+            p
+                font-size: 1rem
+                margin-top: 4%
+                margin-bottom: 7%
+        .scroll
+            margin-top: 80px
+            margin-bottom: 20px
+            width: 20px
+    .features
+        grid-gap: 60px
+        max-width: 1200px
+        margin: 50px auto
+        .item
+            img
+                width: 90px
+                margin-right: 40px
+            .text
+                
+                h3
+                    font-size: 22px
+                    margin-bottom: 10px
+                p
+                    max-width: 200px
+                    font-size: 14px
+    .about
+        font-size: 14px
+        margin-bottom: 80px
+        margin-top: 80px
+        .right
+            max-width: 500px
+            margin-top: 40px
+            margin-bottom: 40px
+            margin-left: 80px
+            h2
+                font-size: 1.8rem
+                margin-bottom: 25px
+            p
+                margin-bottom: 20px
+            .skills
+                padding-top: 25px
+                h5
+                    margin-bottom: 20px
+                .skill
+                    .lvl
+                        margin-bottom: 40px
+                        .programm
+                            font-size: 16px
+    .portfolio
+        h2
+            font-size: 1.8rem
+        .column_port
+            max-width: 1200px
+            grid-gap: 20px
+            margin: 40px auto 60px auto
+            .content
+                .middle
+                    h3
+                        margin-top: 10%
+                        font-size: 28px
+    .slider_bg
+        margin-top: 70px
+
+    .price
+        max-width: 1100px
+        grid-gap: 20px
+        margin-top: 70px
+        margin-bottom: 70px
+        .item_price
+            h4
+                margin-top: 50px
+                margin-bottom: 25px
+            &>span
+                font-size: 16px
+                margin-top: 12px
+                margin-bottom: 12px
+            .btn
+                margin-top: 60px
+                margin-bottom: 50px
+                .inside
+                    padding: 8px 62px
+
+
+@media screen and (min-width: 769px) and (max-width: 1170px)
+    body
+        font-size: 13px
+    .btn
+        margin-right: 400px
+        width: 100px
+        height: 40px
+        margin: 0 auto
+        color: white
+        padding: 12px 4px
+        background: linear-gradient(to right, #00FFBA , #8A0BDB)
+        border-radius: 31px
+        text-decoration: none
+        &:hover
+            background: white
+            color: #8A0BDB
+            span
+                background-color: white
+        span
+            padding: 8px 38px 
+            background-color: black
+            border-radius: 31px
+
+    .header
+        .header-top
+            width: 760px
+            .header-logo
+                font-size: 1.5rem
+                margin-top: 5px
+            .menu
+                ul
+                    li
+                        a
+                            padding-bottom: 0
+
+        .main_header
+            margin-top: 120px
+            max-width: 500px
+            h1
+                font-size: 2.5rem
+                line-height: 1.1
+            p
+                font-size: 14px
+                margin-top: 40px
+                margin-bottom: 50px
+            .button-header
+                margin-bottom: 100px
+
+        .scroll
+            display: none
+    .features
+        grid-gap: 30px
+        max-width: 660px
+        margin: 50px auto
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: "item1 item2"
+        .item
+        
+            img
+                width: 80px
+                margin-right: 35px
+            .text
+                
+                h3
+                    font-size: 16px
+                    margin-bottom: 10px
+                p
+                    max-width: 200px
+                    font-size: 13px
+        .item3
+            grid-column-start: 1
+            grid-column-end: 4
+            justify-content: center
+    .about
+        font-size: 14px
+        margin-bottom: 30px
+        margin-top: 40px
+        .right
+
+            max-width: 320px
+            margin-top: 20px
+            margin-bottom: 20px
+            margin-left: 50px
+            .smth
+                margin-bottom: 15px
+                font-size: 13px
+            h2
+                font-size: 1.4rem
+                margin-bottom: 15px
+            p
+                font-size: 13px
+                margin-bottom: 20px
+            .skills
+                padding-top: 0
+                h5
+                    font-size: 16px
+                    margin-bottom: 10px
+                .skill
+                    .lvl
+                        margin-bottom: 35px
+                        .programm
+                            font-size: 13px
+
+                    .ps
+                        width: 250px
+                    .ai
+                        width: 150px
+                    .seo
+                        width: 180px
+                    .wp
+                        width: 110px
+    .portfolio
+        margin-bottom: 30px
+        .btn-portfolio
+            .btn
+                height: 30px
+                .inside
+                    padding: 8px 34px
+        .smth
+            font-size: 13px
+        h2
+            font-size: 1.4rem
+        .column_port
+            max-width: 700px
+            grid-gap: 15px
+            margin: 20px auto 30px auto
+            .content
+                .middle
+                    h3
+                        margin-top: 10%
+                        font-size: 28px
+    .slider_bg
+        margin-top: 50px
+
+    .price
+        max-width: 700px
+        grid-gap: 20px
+        margin-top: 50px
+        margin-bottom: 50px
+        .item_price
+            h4
+                font-size: 26px
+                margin-top: 30px
+                margin-bottom: 15px
+            p
+                font-size: 34px
+                margin-bottom: 10px
+                span
+                    font-size: 16px
+            &>span
+                font-size: 14px
+                margin-top: 12px
+                margin-bottom: 12px
+            .btn
+                margin-top: 30px
+                margin-bottom: 25px
+                height: 35px
+                .inside
+                    padding: 4px 20px
+    .form
+        padding: 40px 0
+        h3
+            font-size: 28px
+            margin-bottom: 50px
+        form
+            button
+                margin: 0 auto
+                margin-top: 30px
+        .social
+            margin-top: 40px
+    .footer
+        nav
+            padding: 12px 0
+
+
+@media screen and (min-width: 501px) and (max-width: 768px)
+    body
+        font-size: 13px
+    .btn
+        margin-right: 400px
+        width: 100px
+        height: 40px
+        margin: 0 auto
+        color: white
+        padding: 12px 4px
+        background: linear-gradient(to right, #00FFBA , #8A0BDB)
+        border-radius: 31px
+        text-decoration: none
+        &:hover
+            background: white
+            color: #8A0BDB
+            span
+                background-color: white
+        span
+            padding: 8px 38px 
+            background-color: black
+            border-radius: 31px
+
+    .header
+        height: device-height
+        .header-top
+            width: 100%
+            .header-logo
+                font-size: 1.5rem
+                margin-top: 5px
+                margin-left: 20px
+            .menu-btn 
+                position: absolute
+                z-index: 5
+                right: 15px
+                top: 18px
+                cursor: pointer
+                display: block
+                transition: all 0.3s ease-in
+                
+
+                .btn-line 
+                    width: 28px
+                    height: 3px
+                    margin-bottom: 5px
+                    background: #fff
+                    transition: all 0.3s ease-in
+                    
+  
+
+                &.close 
+                    transform: rotate(180deg)
+
+                    .btn-line 
+                        &:nth-child(1) 
+                            transform: rotate(45deg) translate(5px, 5px)
+                            
+
+                        &:nth-child(2) 
+                            opacity: 0
+                            
+
+                        &:nth-child(3) 
+                            transform: rotate(-45deg) translate(7px, -6px)
+      
+    
+  
+
+
+            .menu 
+                z-index: 4
+                position: fixed
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                width: 100%
+                opacity: 1
+                visibility: hidden
+                background-color: #060231
+                
+
+
+                &.show 
+                    visibility: visible
+
+
+    
+
+                &-nav 
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    width: 100%
+                    height: 100vh
+                    overflow: hidden
+                    margin: 0
+                    padding: 0
+                    list-style: none
+                    transform: translate3d(0, -100%, 0)
+                    &.show 
+                        transform: translate3d(0, 0, 0)
+                    .nav-item 
+                        margin: 0 auto
+                        transform: translate3d(600px, 0, 0)
+                        &.show 
+                            transform: translate3d(0, 0, 0)
+  
+
+                        &.current > a 
+                            color: black
+        
+
+
+                    .nav-link 
+                        display: inline-block
+                        position: relative
+                        font-size: 1.5rem
+                        text-transform: uppercase
+                        padding: 0.7rem 0 
+                        text-decoration: none
+
+                            
+
+    
+
+                
+
+        
+
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+        .main_header
+            margin-top: 120px
+            max-width: 400px
+            h1
+                font-size: 2.5rem
+                line-height: 1.1
+            p
+                font-size: 14px
+                margin-top: 40px
+                margin-bottom: 50px
+            .button-header
+                margin-bottom: 100px
+
+        .scroll
+            display: none
+    .features
+        grid-gap: 30px
+        max-width: 660px
+        margin: 50px auto
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: "item1 item2"
+        .item
+        
+            img
+                width: 80px
+                margin-right: 35px
+            .text
+                
+                h3
+                    font-size: 16px
+                    margin-bottom: 10px
+                p
+                    max-width: 200px
+                    font-size: 13px
+        .item3
+            grid-column-start: 1
+            grid-column-end: 4
+            justify-content: center
+    .about
+        font-size: 15px
+        max-width: 680px
+        margin: 60px auto
+        grid-template-columns: 1fr
+        grid-template-areas: "right"
+        .image
+            display: none
+        .right
+            margin: 0
+            margin-left: 20px
+            margin-right: 20px
+            .smth
+                margin-bottom: 15px
+                font-size: 13px
+            h2
+                font-size: 1.6rem
+                margin-bottom: 15px
+            p
+                font-size: 14px
+                margin-bottom: 20px
+            .skills
+                margin-top: 30px
+                padding-top: 0
+                h5
+                    font-size: 16px
+                    margin-bottom: 20px
+                .skill
+                    .lvl
+                        margin-bottom: 35px
+                        .programm
+                            font-size: 13px
+                    
+
+                    .ai
+                        width: 180px
+                    .seo
+                        width: 200px
+                    .wp
+                        width: 140px
+                    .ps
+                        width: 280px
+    .portfolio
+        margin-bottom: 30px
+        margin-left: 10px
+        margin-right: 10px
+        .btn-portfolio
+            .btn
+                .inside
+                    padding: 8px 34px
+        .smth
+            font-size: 13px
+        h2
+            font-size: 1.6rem
+        .column_port
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 10px
+            margin: 20px auto 30px auto
+            .content
+                .middle
+                    display: none
+                    h3
+                        margin-top: 10%
+                        font-size: 28px
+    .slider_bg
+        margin-top: 50px
+
+    .price
+        max-width: 600px
+        grid-gap: 10px
+        margin-top: 50px
+        margin-bottom: 50px
+        .item_price
+            h4
+                font-size: 26px
+                margin-top: 30px
+                margin-bottom: 15px
+            p
+                font-size: 34px
+                margin-bottom: 10px
+                span
+                    font-size: 16px
+            &>span
+                font-size: 14px
+                margin-top: 12px
+                margin-bottom: 12px
+            .btn
+                margin-top: 30px
+                margin-bottom: 25px
+                height: 35px
+                .inside
+                    padding: 4px 20px
+    .form
+        padding: 40px 0
+        h3
+            font-size: 28px
+            margin-bottom: 50px
+            margin-left: 40px
+            margin-right: 40px
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-left: 40px
+            margin-right: 40px
+            input
+                margin-left: 0
+                &[type="email"]
+                    max-width: 500px
+                    margin-top: 10px
+                    width: 100%
+                &[type="text"]
+                    width: 100%
+                    max-width: 500px
+            button
+                margin: 0 auto
+                margin-top: 30px
+        .social
+            margin-top: 40px
+
+            a:last-child
+                margin-right: 0
+    .footer
+        nav
+            padding: 12px 0
+
+
+
+
+@media screen and (max-width: 500px)
+    body
+        font-size: 13px
+
+    .header
+        .header-top
+            width: 100%
+            .header-logo
+                margin-top: 8px
+                font-size: 1.7rem
+                margin-left: 15px
+            .menu-btn 
+                position: absolute
+                z-index: 3
+                right: 15px
+                top: 18px
+                cursor: pointer
+                display: block
+                transition: all 0.3s ease-in
+                
+
+                .btn-line 
+                    width: 28px
+                    height: 3px
+                    margin-bottom: 5px
+                    background: #fff
+                    transition: all 0.3s ease-in
+                    
+  
+
+                &.close 
+                    transform: rotate(180deg)
+
+                    .btn-line 
+                        &:nth-child(1) 
+                            transform: rotate(45deg) translate(5px, 5px)
+                            
+
+                        &:nth-child(2) 
+                            opacity: 0
+                            
+
+                        &:nth-child(3) 
+                            transform: rotate(-45deg) translate(7px, -6px)
+      
+    
+  
+
+
+            .menu 
+                position: fixed
+                top: 0
+                left: 0
+                right: 0
+                bottom: 0
+                width: 100%
+                opacity: 1
+                visibility: hidden
+                background-color: #060231
+                
+
+
+                &.show 
+                    visibility: visible
+
+
+    
+
+                &-nav 
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    width: 100%
+                    height: 100vh
+                    overflow: hidden
+                    margin: 0
+                    padding: 0
+                    list-style: none
+                    transform: translate3d(0, -100%, 0)
+                    &.show 
+                        transform: translate3d(0, 0, 0)
+                    .nav-item 
+                        margin: 0 auto
+                        transform: translate3d(600px, 0, 0)
+                        &.show 
+                            transform: translate3d(0, 0, 0)
+  
+
+                        &.current > a 
+                            color: black
+        
+
+
+                    .nav-link 
+                        display: inline-block
+                        position: relative
+                        font-size: 1.5rem
+                        text-transform: uppercase
+                        padding: 0.7rem 0 
+                        text-decoration: none
+
+                            
+
+    
+
+                
+
+        
+
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+        .main_header
+            margin-top: 90px
+            max-width: 280px
+            h1
+                font-size: 2.1rem
+                line-height: 1.2
+            p
+                display: none
+            .button-header
+                margin-top: 90px
+                margin-bottom: 90px
+
+        .scroll
+            display: none
+    .features
+        width: 100%
+        margin: 40px auto
+        grid-gap: 35px
+        grid-template-columns: 1fr
+        grid-template-areas: "item1" "item2" "item3"
+        .item
+            margin-left: auto
+            margin-right: auto
+            img
+                width: 80px
+                margin-right: 25px
+            .text
+                
+                h3
+                    font-size: 16px
+                    margin-bottom: 5px
+                p
+                    max-width: 190px
+                    font-size: 13px
+    .about
+        font-size: 14px
+        max-width: 450px
+        margin: 60px auto
+        grid-template-columns: 1fr
+        grid-template-areas: "right"
+        .image
+            display: none
+        .right
+            margin: 0
+            margin-left: 20px
+            margin-right: 20px
+            .smth
+                margin-bottom: 15px
+                font-size: 13px
+            h2
+                font-size: 1.6rem
+                margin-bottom: 15px
+            p
+                font-size: 13px
+                margin-bottom: 20px
+            .skills
+                margin-top: 30px
+                padding-top: 0
+                h5
+                    font-size: 16px
+                    margin-bottom: 20px
+                .skill
+                    .lvl
+                        margin-bottom: 35px
+                        .programm
+                            font-size: 13px
+                    
+
+                    .ai
+                        width: 180px
+                    .seo
+                        width: 200px
+                    .wp
+                        width: 140px
+                    .ps
+                        width: 280px
+
+    .portfolio
+        margin-bottom: 30px
+        margin-left: 10px
+        margin-right: 10px
+        .btn-portfolio
+            .btn
+                .inside
+                    padding: 10px 34px
+        .smth
+            font-size: 13px
+        h2
+            font-size: 1.6rem
+        .column_port
+            grid-template-columns: 1fr
+            grid-gap: 5px
+            grid-gap: 15px
+            margin: 20px auto 30px auto
+            .content
+                .middle
+                    display: none
+                    h3
+                        margin-top: 10%
+                        font-size: 28px
+    .slider_bg
+        margin-top: 50px
+
+    .price
+        grid-template-columns: 1fr
+        max-width: 300px
+        grid-gap: 10px
+        margin-top: 60px
+        margin-bottom: 50px
+        .item_price
+            h4
+                font-size: 1.6rem
+                margin-top: 40px
+                margin-bottom: 15px
+            p
+                font-size: 34px
+                margin-bottom: 10px
+                span
+                    font-size: 16px
+            &>span
+                display: none
+            .btn
+                margin-top: 10px
+                margin-bottom: 35px
+                height: 35px
+                width: 100px
+                .inside
+                    padding: 4px 20px
+    .form
+        padding: 40px 0
+        h3
+            font-size: 28px
+            margin-bottom: 50px
+            margin-left: 20px
+            margin-right: 20px
+        form
+            display: flex
+            flex-direction: column
+            margin-left: 20px
+            margin-right: 20px
+            input
+                margin-left: 0
+                &[type="email"]
+                    margin-top: 10px
+                    min-width: 80px
+                    max-width: 450px
+                &[type="text"]
+                    min-width: 80px
+                    max-width: 450px
+            button
+                margin: 0 auto
+                margin-top: 30px
+        .social
+            margin-top: 40px
+
+            a:last-child
+                margin-right: 0
+    .footer
+        display: none
+        nav
+            padding: 12px 0
+

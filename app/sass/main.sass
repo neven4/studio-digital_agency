@@ -1,0 +1,581 @@
+@import "vars"
+@import "fonts"
+
+*
+	margin: 0
+	padding: 0
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.smth
+	color: #95989A
+	display: flex
+	align-items: center
+	margin-bottom: 25px
+	font-size: 1rem
+	.dif
+		width: 40px
+		height: 2px
+		background: linear-gradient(to right, #00FFBA , #8A0BDB)
+		margin-right: 15px
+
+.btn
+	margin-right: 400px
+	width: 200px
+	height: 54px
+	margin: 0 auto
+	color: white
+	padding: 16px 6px
+	background: linear-gradient(to right, #00FFBA , #8A0BDB)
+	border-radius: 31px
+	text-decoration: none
+
+
+	
+	&:hover
+		background: white
+		color: #8A0BDB
+		span
+			background-color: white
+	span
+		padding: 10px 50px 
+		background-color: black
+		border-radius: 31px
+	
+	
+
+
+.header
+	position: relative
+	background-image: url(../img/bridge-1660417_1920.jpg)
+	background-repeat: no-repeat
+	background-position: center 
+	background-size: cover
+	width: 100%
+	height: 100%
+	box-shadow: 0 0 0 600px rgba(0, 0, 0, 0.6) inset
+	.header-top
+		max-width: 1700px
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.menu-btn
+			display: none
+		.header-logo
+			margin-top: 20px
+			font-family: "nunito"
+			font-size: 3rem
+			.logo
+				text-decoration: none
+				color: #ffffff
+
+		.menu
+			ul
+				display: flex
+				align-items: center
+				li
+					list-style: none
+					margin-left: 30px
+					a
+						color: white
+						text-decoration: none
+						padding-bottom: 10px
+						transition: .3s ease
+						position: relative
+						&:after
+							content: ''
+							position: absolute
+							display: block
+							left: 0%
+							width: 0%
+							background-color: #fff
+							height: 1px
+							margin-top: 3px
+							transition: width 0.3s ease-out
+							
+						&:hover:after
+							width: 70%
+						
+				
+						
+	.main_header
+		margin: 0 auto
+		margin-top: 250px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		max-width: 800px
+		text-align: center
+
+	
+		h1
+			font-size: 4rem	
+			font-family: "nunito"
+			
+			color: white
+			font-weight: 400
+			line-height: 75px
+		p
+			margin-top: 6%
+			margin-bottom: 10%
+			color: $grey
+			font-size: 1.25rem	
+		.button-header
+			.btn
+				text-decoration: none
+				margin-top: 0		
+	.scroll
+		margin: 190px auto 50px auto
+		width: 25px
+		height: 100%		
+		
+
+
+
+
+
+
+			
+.features
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 110px
+	grid-template-areas: "item1 item2 item3"
+	max-width: 1600px
+	margin: 80px auto
+	
+	.item
+		display: flex
+		align-items: center
+		img
+			width: 120px
+			height: 100%
+			margin-right: 60px
+		.text
+			h3
+				font-family: "nunito"
+				color: #1F1F1F
+				font-size: 26px
+				text-transform: uppercase
+				font-weight: 400	
+				margin-bottom: 20px
+			p
+				max-width: 240px
+				color: #95989A
+				font-size: 16px
+	.item1
+		grid-area: "item1"
+	.item2
+		grid-area: "item2"
+	.item3
+		grid-area: "item3"
+
+.about
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-template-areas: "left right"
+	font-size: 16px
+	margin-bottom: 100px
+	margin-top: 120px
+
+	.image
+		grid-area: "left"
+		background-image: url(../img/img.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		width: 50vw
+		height: 100%
+	.right
+		grid-area: "right"
+		max-width: 660px
+		margin-left: 110px
+		margin-top: 60px
+		margin-bottom: 60px
+
+		h2
+			font-family: "nunito"
+			font-size: 42px
+			text-transform: uppercase
+			margin-bottom: 35px
+			font-weight: 400
+		p
+			color: #95989A
+			margin-bottom: 25px
+		.skills
+			padding-top: 48px
+			h5
+				font-family: "nunito"
+				font-size: 20px
+				font-weight: 400
+				margin-bottom: 26px
+			.skill
+				
+				.lvl
+					height: 5px
+					background: linear-gradient(to right, #E13BFF , #0BDBA3)
+					margin-bottom: 50px
+					span
+						line-height: 40px
+					.persent
+						float: right
+					.programm	
+						font-size: 18px				
+						font-weight: 700
+						
+				.ps
+					width: 350px
+				.ai
+					width: 250px
+				.seo
+					width: 280px
+				.wp
+					width: 210px
+				
+.portfolio
+	margin-bottom: 50px
+
+
+	.btn-portfolio
+		text-align: center
+		.btn
+			
+			margin: 0 auto
+			.inside
+				align-self: center
+				padding: 10px 55px
+				transition: background-color 0.5s ease
+			&:hover
+				background: #8A0BDB
+				.inside
+					background-color: white
+					color: #8A0BDB
+		
+			
+	h2
+		text-transform: uppercase
+		font-family: "nunito"
+		font-size: 40px
+		font-weight: 400
+		text-align: center
+		margin-bottom: 5px
+	.smth
+		
+		justify-content: center
+				
+		
+	.column_port
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 30px
+		max-width: 1700px
+		margin: 60px auto 
+
+		img
+			width: 100%
+
+		
+		.content
+			position: relative
+			cursor: pointer
+			&:hover
+				.middle
+					opacity: 1
+
+			.image_port
+				  opacity: 1
+				  display: block
+				  width: 100%
+				  height: auto
+				  transition: .5s ease
+				  backface-visibility: hidden
+			.middle
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				right: 0
+				display: flex
+				flex-direction: column
+				align-items: center
+				color: white
+				margin: 10px
+				border: 2px solid white
+				background-color: rgba(64, 64, 64, .7)
+				transition: .5s ease
+				opacity: 0
+				h3
+					font-family: "nunito"
+					font-size: 32px
+					font-weight: 400
+					margin-top: 17%
+					margin-bottom: 5%
+				p
+					padding: 0 45px
+					text-align: center
+					margin-bottom: 5%
+				a
+					text-decoration: none
+					color: white
+					position: relative
+					cursor: pointer
+					&:after
+						content: ''
+						position: absolute
+						display: block
+						left: 0
+						width: 60%
+						border: 1px solid white
+						transition: width 0.2s ease-out
+					&:hover:after
+						width: 100%
+
+
+// Slider
+
+.slider_bg
+	background: linear-gradient(to right, rgba(11, 219, 163, .8) 0%, rgba(138, 11, 219, 0.8) 100%), url('../img/workplace-1245776_1920.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	width: 100%
+	max-height: 380px
+	margin-top: 90px
+
+		
+
+
+
+					
+
+
+
+
+				
+.price
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: 30px
+	max-width: 1550px
+	margin: 90px auto
+	.item_price
+		border: 3px solid #8A0BDB
+		display: flex
+		flex-direction: column
+		align-items: center
+		
+		&:hover
+			background: linear-gradient(to bottom, #0BDBA3, #E13BFF)
+			border-color: white
+			h4
+				color: white
+			p
+				color: white
+			span
+				color: white
+			.btn
+				background: white
+				.inside
+					background-color: white
+					color: #E13BFF
+					font-weight: 700
+
+
+		h4
+			font-family: "nunito"
+			font-size: 32px
+			font-weight: 400
+			margin-top: 100px
+			margin-bottom: 35px
+			text-transform: uppercase
+			color: #8A0BDB
+		p
+			font-family: "nunito"
+			font-weight: 700
+			font-size: 40px
+			color: #8A0BDB
+			margin-bottom: 25px
+			span
+				line-height: 40px
+				font-weight: 400
+				font-size: 20px
+		&>span
+			font-size: 20px
+			color: #5A5A5A
+			margin: 15px  auto
+		.btn
+			margin: 80px 0 100px 0
+			display: flex
+			text-align: center
+			justify-content: center
+			align-items: center
+			padding: 0
+			text-decoration: none
+			box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+			
+			&:hover
+				
+				.inside
+					color: #E13BFF
+
+			.inside
+				align-self: center
+				padding: 8px 60px
+				color: white
+
+.form
+	background: linear-gradient(to right, rgba(11, 219, 163, .8) 0%, rgba(138, 11, 219, 0.8) 100%), url('../img/golden-gate-bridge-388917_1920.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	padding: 70px 0px
+	
+	h3
+		font-size: 32px
+		font-weight: 400
+		text-align: center
+		color: white
+		margin-bottom: 70px
+	form
+		text-align: center
+		
+		input
+			border: none
+			padding: 10px 15px
+			border-radius: 4px
+			margin-left: 10px
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, .16)
+		input[type="email"]
+			min-width: 400px
+		input[type="text"]
+			min-width: 250px
+		button
+			border: none
+			background-color: #0BDBA3
+			border-radius: 25px
+			margin-left: 15px
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, .16)
+			padding: 10px 40px
+			font-family: "nunito"
+			text-transform: uppercase
+			color: white
+			font-size: 16px
+			cursor: pointer
+			
+			&:hover
+				background-color: #0DCB98
+				color: rgba(255, 255, 255, .9)
+
+	.social
+		display: flex
+		justify-content: center			
+		margin-top: 50px
+		
+		a
+			height: 40px
+			width: 40px
+			border-radius: 50%
+			background-color: white
+			text-align: center
+			margin-right: 15px
+			&:hover
+				background-color: #E8E8E8
+				
+			.fab
+				color: #95989A
+				line-height: 40px
+				
+.footer
+	background-color: #1F1F1F
+	nav
+		padding: 20px 0
+		ul
+			display: flex
+			list-style: none
+			justify-content: center
+			margin: 0
+			padding: 0
+			li
+				&:not(:first-child)
+					margin-left: 40px
+				a
+					position: relative
+					
+					color: white
+					text-decoration: none
+					&:after
+						content: ''
+						position: absolute
+						display: block
+						left: 0%
+						width: 0%
+						background-color: white
+						height: 2px
+						transition: width 0.2s ease-out
+						
+					&:hover:after
+						width: 70%
+
+
+
+@import "media"
+
+
+
+					
+
+
+				
+				
+				
+				
+				
+
+
+					
+					
+					
+					
+				
+				
+
+
+
+		
+
+					
+					
+					
+						
+						
+					
+					
+
+
+
+					
+
+
+
+	
+
+
+
+
+			
+		
+
+	
+						
+		
+
+
+
+
+
