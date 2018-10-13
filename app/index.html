@@ -25,305 +25,7 @@
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
 	 crossorigin="anonymous">
-	<style>
-		/* Slider styles and responsive */
-		.slider {
-			position: relative;
-			width: 100%;
-			height: 380px;
-			overflow: hidden;
-		}
 
-		.slider__slides {
-			position: relative;
-			width: 100%;
-			height: 380px;
-			transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
-			will-change: transform;
-		}
-
-		.slider[data-pos="0"] .slider__slides {
-			transform: translateY(0%);
-		}
-
-		.slider[data-pos="1"] .slider__slides {
-			transform: translateY(-100%);
-		}
-
-		.slider[data-pos="2"] .slider__slides {
-			transform: translateY(-200%);
-		}
-
-		.slider[data-pos="3"] .slider__slides {
-			transform: translateY(-300%);
-		}
-
-		.slider__slide {
-			max-width: 800px;
-			height: 380px;
-			margin: 0 auto;
-			color: #fff;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-
-		.person {
-			display: flex;
-			align-items: center;
-		}
-
-		.person img {
-			height: 100px;
-			width: 100px;
-			border-radius: 50%;
-			border: 1px solid #fff;
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-
-		.person-info {
-			margin-left: 20px;
-		}
-
-		.person-info h5 {
-			font-size: 20px;
-			font-weight: 400;
-		}
-
-		.review p {
-			margin-top: 25px;
-			font-size: 20px;
-		}
-
-
-		.slider__dots {
-			display: flex;
-			flex-direction: column;
-			position: absolute;
-			bottom: 34%;
-			right: 0;
-			transform: translateX(-50%);
-		}
-
-		.slider__dot,
-		.slider__indicator {
-			display: block;
-			margin: 0.5em 0;
-			width: 1em;
-			height: 1em;
-			background: rgba(255, 255, 255, 0.7);
-			border-radius: 50%;
-			cursor: pointer;
-		}
-
-		.slider__indicator {
-			position: absolute;
-			background: #0BDBA3;
-			height: auto;
-		}
-
-		.slider__indicator--left {
-			transition: top 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15), bottom 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15);
-		}
-
-		.slider__indicator--right {
-			transition: top 0.3s 0.1s cubic-bezier(0.51, 0.92, 0.24, 1.15), bottom 0.3s cubic-bezier(0.51, 0.92, 0.24, 1.15);
-		}
-
-		.slider[data-pos="0"] .slider__indicator {
-			top: 0em;
-			bottom: 6em;
-		}
-
-		.slider[data-pos="1"] .slider__indicator {
-			top: 2em;
-			bottom: 4em;
-		}
-
-		.slider[data-pos="2"] .slider__indicator {
-			top: 4em;
-			bottom: 2em;
-		}
-
-		.slider[data-pos="3"] .slider__indicator {
-			top: 6em;
-			bottom: 0em;
-		}
-
-		.slider {
-			margin: 0 auto;
-			max-width: 1700px;
-			max-height: 400px;
-		}
-
-		@media screen and (min-width: 1171px) and (max-width: 1400px) {
-			.slider {
-				max-width: 1200px;
-				font-size: 14px;
-
-			}
-
-			.person img {
-				height: 80px;
-				width: 80px;
-
-			}
-
-			.person-info {
-				margin-left: 20px;
-			}
-
-			.person-info h5 {
-				font-size: 16px;
-				font-weight: 400;
-			}
-
-			.review p {
-				margin-top: 25px;
-				font-size: 16px;
-			}
-		}
-
-		@media screen and (min-width: 769px) and (max-width: 1170px) {
-			.slider {
-				max-width: 760px;
-				font-size: 13px;
-				height: 280px;
-			}
-
-			.slider[data-pos="0"] .slider__slides {
-				transform: translateY(0px);
-			}
-
-			.slider[data-pos="1"] .slider__slides {
-				transform: translateY(-280px);
-			}
-
-			.slider[data-pos="2"] .slider__slides {
-				transform: translateY(-560px);
-			}
-
-			.slider[data-pos="3"] .slider__slides {
-				transform: translateY(-840px);
-			}
-
-			.slider__slide {
-				max-width: 800px;
-				height: 280px;
-			}
-
-			.person img {
-				height: 60px;
-				width: 60px;
-
-			}
-
-			.person-info {
-				margin-left: 20px;
-			}
-
-			.person-info h5 {
-				font-size: 16px;
-				font-weight: 400;
-			}
-
-			.review p {
-				max-width: 700px;
-				margin-top: 25px;
-				font-size: 14px;
-			}
-		}
-
-		@media screen and (min-width: 501px) and (max-width: 768px) {
-			.slider {
-				max-width: 480px;
-				font-size: 13px;
-
-			}
-
-
-			.slider__slide {
-				width: 100%;
-
-			}
-
-			.person img {
-				height: 60px;
-				width: 60px;
-
-			}
-
-			.person-info {
-				margin-left: 20px;
-			}
-
-			.person-info h5 {
-				font-size: 17px;
-				font-weight: 400;
-			}
-
-			.review p {
-				max-width: 400px;
-				margin-top: 20px;
-				font-size: 14px;
-				margin-left: 10px;
-			}
-		}
-
-
-		@media screen and (max-width: 500px) {
-			.slider {
-				max-width: 310px;
-				font-size: 13px;
-				height: 280px;
-			}
-
-			.slider[data-pos="0"] .slider__slides {
-				transform: translateY(0px);
-			}
-
-			.slider[data-pos="1"] .slider__slides {
-				transform: translateY(-280px);
-			}
-
-			.slider[data-pos="2"] .slider__slides {
-				transform: translateY(-560px);
-			}
-
-			.slider[data-pos="3"] .slider__slides {
-				transform: translateY(-840px);
-			}
-
-			.slider__slide {
-				width: 100%;
-				height: 280px;
-			}
-
-			.person img {
-				height: 60px;
-				width: 60px;
-
-			}
-
-			.person-info {
-				margin-left: 20px;
-			}
-
-			.person-info h5 {
-				font-size: 17px;
-				font-weight: 400;
-			}
-
-			.review p {
-				max-width: 260px;
-				margin-top: 20px;
-				font-size: 14px;
-				margin-left: 5px;
-			}
-		}
-	</style>
 </head>
 
 <body>
@@ -383,7 +85,8 @@
 
 			<h1>We build digital products & services</h1>
 
-			<p>From small businesses to large companies, we have been successfully creating websites and web applications for our
+			<p>From small businesses to large companies, we have been successfully creating websites and web applications for
+				our
 				clients.
 			</p>
 
@@ -490,11 +193,14 @@
 
 			<h2>about us</h2>
 
-			<p>Man signs moving of may may made above likeness kind fowl together gathered third their itself, earth void signs Thing
-				waters. To give fourth shall days stars. Male darkness, it appear them the there which fruit unto creepeth years subdue
+			<p>Man signs moving of may may made above likeness kind fowl together gathered third their itself, earth void signs
+				Thing
+				waters. To give fourth shall days stars. Male darkness, it appear them the there which fruit unto creepeth years
+				subdue
 				day bearing man given she’d grass so them.</p>
 
-			<p>From. Above dominion place she’d the itself fish let creature kind. Sixth moveth whose. Spirit. Seasons fruit that
+			<p>From. Above dominion place she’d the itself fish let creature kind. Sixth moveth whose. Spirit. Seasons fruit
+				that
 				earth dry be fly gathered yielding made his itself firmament creeping dry abundantly lights make.</p>
 
 			<div class="skills">
@@ -659,7 +365,8 @@
 
 					<div class="review">
 
-						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit
+							together
 							two gathering him void image was midst rule hath may isn’t waters.”</p>
 
 					</div>
@@ -677,7 +384,8 @@
 
 					<div class="review">
 
-						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit
+							together
 							two gathering him void image was midst rule hath may isn’t waters.”</p>
 
 					</div>
@@ -694,7 +402,8 @@
 
 					<div class="review">
 
-						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit
+							together
 							two gathering him void image was midst rule hath may isn’t waters.”</p>
 
 					</div>
@@ -711,7 +420,8 @@
 
 					<div class="review">
 
-						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit together
+						<p>“Meat it which kind cattle. Tree called in won’t meat. I creature yielding gathered winged fruitful fruit
+							together
 							two gathering him void image was midst rule hath may isn’t waters.”</p>
 
 					</div>
